@@ -111,7 +111,10 @@ class GUI():
         else:
             st.info(
                 'To start using Fire Detection Application, you must first select an Application from the sidebar menu other than Empty. \n Below is a visual demo of the working model.')
-           
+            video_file = open('firedet_demo.webm', 'rb')
+            video_bytes = video_file.read()
+            
+            st.video(video_bytes)
     # --------------------------------------------------------------------------
     def sidebarEmpty(self):
         pass
